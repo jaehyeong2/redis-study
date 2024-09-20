@@ -1,10 +1,10 @@
-package jjfactory.redis_study.service
+package jjfactory.redis_study.template
 
 import org.springframework.data.redis.core.RedisTemplate
 import org.springframework.stereotype.Service
 
 @Service
-class RankingService(
+class RedisSetService(
     private val redisTemplate: RedisTemplate<String, Any>
 ) {
     private val RANKING_KEY = "contentRanking"
