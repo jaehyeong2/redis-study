@@ -3,6 +3,7 @@ plugins {
 	kotlin("plugin.spring") version "1.9.25"
 	id("org.springframework.boot") version "3.3.3"
 	id("io.spring.dependency-management") version "1.1.6"
+	kotlin("plugin.jpa") version "1.9.0"
 }
 
 group = "jjfactory"
@@ -18,8 +19,15 @@ repositories {
 	mavenCentral()
 }
 
+//allOpen {
+//	annotation("javax.persistence.Entity")
+//	annotation("javax.persistence.MappedSuperclass")
+//	annotation("javax.persistence.Embeddable")
+//}
+
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-redis")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
